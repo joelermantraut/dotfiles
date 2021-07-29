@@ -1,0 +1,14 @@
+xrandr -s 1366x768 &
+setxkbmap latam &
+betterlockscreen -w &
+picom -f &
+xset -b &
+xset s off -dpms &
+xset r rate 180 60 &
+xhost + &
+clipster -d &
+udiskie -t &
+xmodmap ~/.Xmodmap &
+xkbcomp output.xkb $DISPLAY &
+$HOME/.config/scripts/snippets.py &
+$HOME/.config/scripts/volume_control.py &

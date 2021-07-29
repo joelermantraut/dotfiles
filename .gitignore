@@ -1,0 +1,11 @@
+__pycache__
+*.cache
+*.backup
+*.bak
+
+*/nvim/pack
+*/nvim/plugged
+*/nvim/undodir
+
+*/.git
+

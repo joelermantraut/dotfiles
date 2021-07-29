@@ -1,0 +1,3 @@
+#!/bin/bash
+
+dmenu_run -p " " -h 20 -i -nf '#CFDEE7' -nb '#0A369D' -sf '#0A369D' -sb '#5E7CE2' -fn 'UbuntuMono Nerd Font:pixelsize=13' "$@"

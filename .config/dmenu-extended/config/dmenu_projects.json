@@ -1,0 +1,8 @@
+{
+    "Open Home": {
+        "commands": [
+            "exo-open /home"
+        ],
+        "type": "Directory"
+    }
+}
