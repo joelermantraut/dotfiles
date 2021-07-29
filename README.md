@@ -26,8 +26,3 @@ but a bit modified.
 - Gtk theme is [Sweet Dark](https://www.gnome-look.org/p/1253385/)
 - Icon theme is [Candy Icons](https://www.gnome-look.org/p/1305251/)
 - LightDM theme is default theme.
-
-## Adittional
-- It is configured a special keyboard layout, a variation of the default latam layout. For that are the files "output.xkb" and ".Xmodmap".
-
-## Screenshots
