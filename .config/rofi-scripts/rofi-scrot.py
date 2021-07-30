@@ -6,8 +6,14 @@ Script that uses scrot to take snapshots.
 
 import screeninfo
 import subprocess
+from datetime import datetime
+import time
 import sys
 import i3
+import os
+
+CAPTURES_FOLDER = os.path.expanduser("~/Imagenes/captures")
+WAIT_TIME = 0.4
 
 def get_cmd_output(cmd):
     """
@@ -60,7 +66,17 @@ def select_window():
     options = ["CURRENT", "SELECT"]
     result = launch_rofi(options)
 
-    return result
+    return result[0:-1]
+
+def get_time():
+    """
+    Opens Rofi to enter a number.
+    """
+    n = launch_rofi([])
+    if int(n) in range(0, 100):
+        return int(n)
+    else:
+        return -1
 
 # def select_window():
     # """
@@ -98,25 +114,29 @@ def select_cmd(option):
     needed command to do it.
     """
     cmd = ""
-    if option == "ALL\n":
+    if option == "ALL":
         _, _, width, height = get_screen_size(-1) # -1 to get all
         cmd = f"scrot -a 0,0,{width},{height} "
-    elif option == "WINDOW\n":
+    elif option == "WINDOW":
         window = select_window()
         if window == "CURRENT":
             cmd = "scrot -u "
         else:
             cmd = "scrot -s "
-    elif option == "AREA\n":
-        cmd = "scrot -s -f"
-    elif option == "SCREEN\n":
+    elif option == "AREA":
+        cmd = "scrot -s -f "
+    elif option == "SCREEN":
         n_screen = len(screeninfo.get_monitors())
         options = [str(item) for item in range(n_screen)]
         selected_screen = launch_rofi(options)
         x, y, width, height = get_screen_size(int(selected_screen))
-        cmd = f"scrot -a {x} {y} {width} {height}"
-    elif option == "COUNTDOWN\n":
-        cmd = f"scrot -d 5 "
+        cmd = f"scrot -a {x},{y},{width},{height} "
+    elif option == "COUNTDOWN":
+        n = get_time()
+        if n <= 0:
+            exit(0)
+        else:
+            cmd = f"scrot -d {n} "
     else:
         return -1
 
@@ -126,43 +146,67 @@ def format_cmd(cmd, args):
     """
     Saves screenshot depending on parameters received.
     """
-    if "-c" in args:
-        pass # HOW?
+
     if "-p" in args:
         path = args[args.index("-p") + 1]
-        cmd += path
-        if "-s" in args:
-            cmd += f" -e {path}" # Pass to PINTA
+        if not path.split(".")[-1] in ["png", "jpg"]:
+            path += ".png"
+    else:
+        now = datetime.now() # current date and time
+        current_time = now.strftime("%m-%d-%Y-%H-%M-%S")
+        path = f"{current_time}.png"
 
-    return cmd
+    cmd += path
+    if "-o" in args:
+        cmd += f" -e pinta {path}" # Pass to PINTA
+    # Change name
+
+    cmd += f" -e 'mv $f {CAPTURES_FOLDER}' "
+    # Move to captures folder
+
+    return cmd, path
 
 def run_cmd(cmd):
     """
     Runs generated command.
     """
-    print(cmd)
-    # print(subprocess.check_call(f"{cmd}", shell = True))
+    subprocess.check_call(f"{cmd}", shell = True)
 
 def run():
-    args = sys.argv[0:-2]
+    args = sys.argv[1:]
 
     options = [
         "ALL",
         "WINDOW",
-        "SECTION",
+        "AREA",
         "SCREEN",
         "COUNTDOWN"
     ]
 
-    result = launch_rofi(options)
+    result = None
+    for option in options:
+        if f"--{option.lower()}" in args:
+            result = option
+            break
+    if result == None:
+        result = launch_rofi(options)[0:-1]
 
     cmd = select_cmd(result)
     if cmd == -1:
         return 0
 
-    cmd = format_cmd(cmd, args)
+    cmd, path = format_cmd(cmd, args)
 
+    time.sleep(WAIT_TIME)
     run_cmd(cmd)
+
+    if "-c" in args:
+        copy_cmd = f"xclip -selection clipboard -t image/png -i {CAPTURES_FOLDER}/{path}"
+        run_cmd(copy_cmd)
+    elif "-oc" in args:
+        copy_cmd = f"xclip -selection clipboard -t image/png -i {CAPTURES_FOLDER}/{path}"
+        run_cmd(copy_cmd)
+        os.remove(f"{CAPTURES_FOLDER}/{path}")
 
 def main():
     run()

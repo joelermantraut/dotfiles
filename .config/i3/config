@@ -16,7 +16,8 @@ set $dmenu_expulse_drives   ~/.config/rofi-scripts/rofi-expulse-drives.py
 set $dmenu_passmenu         ~/.config/rofi-scripts/rofi-advance-passmenu.py
 set $dmenu_bookmarks        ~/.config/rofi-scripts/rofi-bookmarks.py
 set $dmenu_kill             ~/.config/rofi-scripts/rofi-kill.sh
-#set $dmenu_scrot            ~/.config/dmenu/dmenu-scrot.sh
+set $dmenu_scrot            ~/.config/rofi-scripts/rofi-scrot.py
+set $dmenu_scrot_copy       ~/.config/rofi-scripts/rofi-scrot.py -c
 set $dmenu_search           ~/.config/rofi-scripts/rofi-search.py
 set $dmenu_output           ~/.config/rofi-scripts/rofi-output-audio.py
 set $dmenu_run               "rofi -show run -p ' ' -theme ~/.config/rofi/dmenu-extended.rasi"
@@ -167,7 +168,6 @@ for_window [workspace="10"] floating enable
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
 bindsym $mod+Shift+q exec $dmenu_session
 bindsym $mod+$alt+l exec i3-msg workspace 1 && exec betterlockscreen -l dim blur
 # Moves to safe workspace
@@ -180,9 +180,9 @@ bindsym $mod+Shift+n exec $rofitication
 
 bindsym $mod+Shift+space exec $rofi
 
-bindsym $mod+Shift+s exec flameshot gui
-bindsym $mod+Shift+Print exec $flameshot_full
-bindsym Print exec $flameshot_copy
+bindsym $mod+Shift+s exec $dmenu_scrot
+bindsym $mod+Shift+Print exec $dmenu_scrot
+bindsym Print exec $dmenu_scrot_copy
 
 bindsym $mod+Shift+v exec $clipster
 bindsym $mod+period exec "rofimoji"
@@ -195,7 +195,6 @@ bindsym $mod+$alt+v exec virtualbox
 bindsym $mod+$alt+u exec $dmenu_expulse_drives
 bindsym $mod+$alt+b exec $dmenu_bookmarks
 bindsym $mod+$alt+k exec $dmenu_kill
-bindsym $mod+$alt+s exec $dmenu_scrot
 bindsym $mod+$alt+g exec $dmenu_search
 bindsym $mod+$alt+o exec $dmenu_output
 
