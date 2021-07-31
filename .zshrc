@@ -5,8 +5,7 @@ export TERMINAL=alacritty
 export VISUAL=nvim
 export EDITOR=nvim
 
-export PATH=$PATH:/home/joel/.local/bin
-export PATH=$PATH:/home/joel/android-studio/bin
+export PATH=$PATH:/home/joel/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin
 
 export PATH=$PATH:/usr/lib/ruby/gems/2.7.0
 export PATH=$PATH:/home/joel/.local/share/gem/ruby/2.7.0

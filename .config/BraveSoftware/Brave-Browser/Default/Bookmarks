@@ -1,5 +1,5 @@
 {
-   "checksum": "168f02d9de8b6827986fbf8424557c30",
+   "checksum": "6a261c007d46c2036461dbcf0a45a6db",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -444,9 +444,16 @@
                   "name": "i3: i3 User’s Guide",
                   "type": "url",
                   "url": "https://i3wm.org/docs/userguide.html"
+               }, {
+                  "date_added": "13272185802691936",
+                  "guid": "03ff813a-e113-4985-b65a-d007c8458311",
+                  "id": "278",
+                  "name": "LIB/i3/i3tool.sh · master · Neodots / neodots.i3 · GitLab",
+                  "type": "url",
+                  "url": "https://gitlab.com/gamma-neodots/neodots.i3/blob/master/LIB/i3/i3tool.sh#L224"
                } ],
                "date_added": "13258925233763340",
-               "date_modified": "13260853343613830",
+               "date_modified": "13272185808403521",
                "guid": "b08eff3c-5b56-4ffe-8e18-bb69f75a3266",
                "id": "240",
                "name": "i3",
@@ -544,7 +551,7 @@
                "url": "https://www.atlassian.com/git/tutorials/dotfiles"
             } ],
             "date_added": "13253321237620778",
-            "date_modified": "13271991936830959",
+            "date_modified": "13272185802691936",
             "guid": "3cb3eb77-1bbe-4a98-8b3a-13a297b851ff",
             "id": "69",
             "name": "Informatica",

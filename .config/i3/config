@@ -21,6 +21,7 @@ set $dmenu_scrot_copy       ~/.config/rofi-scripts/rofi-scrot.py -c
 set $dmenu_search           ~/.config/rofi-scripts/rofi-search.py
 set $dmenu_output           ~/.config/rofi-scripts/rofi-output-audio.py
 set $dmenu_run               "rofi -show run -p ' ' -theme ~/.config/rofi/dmenu-extended.rasi"
+set $dmenu_start_vm         ~/.config/rofi-scripts/rofi-start-vm.py
 set $rofitication           ~/.config/dunst-scripts/rofi_noti_manager.py
 
 # Commands
@@ -190,7 +191,7 @@ bindsym $mod+$alt+p exec $dmenu_passmenu
 
 bindsym $mod+$alt+c exec qalculate-gtk
 bindsym $mod+e exec pcmanfm
-bindsym $mod+$alt+v exec virtualbox
+bindsym $mod+$alt+v exec $dmenu_start_vm
 
 bindsym $mod+$alt+u exec $dmenu_expulse_drives
 bindsym $mod+$alt+b exec $dmenu_bookmarks
