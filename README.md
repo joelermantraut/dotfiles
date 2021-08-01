@@ -28,9 +28,9 @@ but a bit modified.
 - LightDM theme is default theme.
 
 ## Screenshots
-![screenshot_1](07-31-2021-21-21-37.png)
-![screenshot_2](07-31-2021-21-22-04.png)
-![screenshot_3](07-31-2021-21-26-13.png)
-![screenshot_4](08-01-2021-02-41-29.png)
-![screenshot_5](08-01-2021-02-42-13.png)
-![screenshot_6](08-01-2021-02-45-57.png)
+![screenshot_1](https://github.com/joelermantraut/dotfiles/blob/master/dotfiles-screenshots/07-31-2021-21-21-37.png)
+![screenshot_2](https://github.com/joelermantraut/dotfiles/blob/master/dotfiles-screenshots/07-31-2021-21-22-04.png)
+![screenshot_3](https://github.com/joelermantraut/dotfiles/blob/master/dotfiles-screenshots/07-31-2021-21-26-13.png)
+![screenshot_4](https://github.com/joelermantraut/dotfiles/blob/master/dotfiles-screenshots/08-01-2021-02-41-29.png)
+![screenshot_5](https://github.com/joelermantraut/dotfiles/blob/master/dotfiles-screenshots/08-01-2021-02-42-13.png)
+![screenshot_6](https://github.com/joelermantraut/dotfiles/blob/master/dotfiles-screenshots/08-01-2021-02-45-57.png)
