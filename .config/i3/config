@@ -170,7 +170,7 @@ for_window [workspace="10"] floating enable
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+q exec $dmenu_session
-bindsym $mod+$alt+l exec i3-msg workspace 1 && exec betterlockscreen -l dim blur -t "Don't touch my machine!"
+bindsym $mod+$alt+l exec i3-msg workspace 1 && exec betterlockscreen -l dimblur -t "Don't touch my machine!"
 
 bindsym $mod+Ctrl+q [class=".*"] kill
 

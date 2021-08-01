@@ -208,6 +208,11 @@
         <command>brave</command>
       </action>
     </keybind>
+    <keybind key="S-W-s">
+      <action name="Execute">
+        <command>~/.config/rofi-scripts/rofi-scrot.py</command>
+      </action>
+    </keybind>
     <keybind key="W-w">
       <action name="Close"/>
     </keybind>
