@@ -3,31 +3,24 @@
 import i3
 import sys
 
-def cycle(window_exe, window_title, window_class):
-    current = i3.filter(nodes=[], focused=True)
-    current_title = current[0]["window_properties"]["title"]
-    current_class = current[0]["window_properties"]["class"]
+def cycle(window_title, window_class):
+    windows = i3.filter(nodes=[])
+    print(windows)
 
-    print(current)
+    for window in windows:
+        try:
+            actual_window_title = window['window_properties']['title']
+            actual_window_class = window['window_properties']['class']
 
-    # if current_title == window_title or current_class == window_class:
-        # return
-    # else:
-        # other = i3.filter(nodes=[], focused=False)
-        # for window in other:
-            # try:
-                # this_window_title = window['window_properties']['title']
-                # this_window_class = window['window_properties']['class']
-                # if this_window_class == window_class or this_window_title == window_class:
-                    # i3.focus(con_id=window['id'])
-                    # return
-            # except:
-                # pass
-
-    # i3.command('exec', window_exe)
+            if window_title != None and window_title == actual_window_title:
+                print("OK")
+            elif window_class != None and window_class == actual_window_class:
+                print("OK")
+        except:
+            pass
 
 if __name__ == '__main__':
     # args = sys.argv
 
     # cycle(args[1], args[2], args[3])
-    cycle("", "", "")
+    cycle("", "Brave-browser")
