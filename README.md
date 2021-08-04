@@ -14,7 +14,7 @@ but a bit modified.
 - There is also installed [my own compilation](https://github.com/joelermantraut/dmenu-own-compilation) of [Dmenu](https://tools.suckless.org/dmenu/), which can be useful eventually.
 - The default web browser is [Brave Browser](https://brave.com/).
 - The default file manager is [Pcmanfm](https://wiki.lxde.org/es/PCManFM).
-- The notification daemon is Dunst.
+- The notification daemon is [Dunst](https://dunst-project.org/).
 - Clipboard manager is [Clipster](https://github.com/mrichar1/clipster)
 - Session manager is [LightDM](https://wiki.archlinux.org/title/LightDM) with gtk-gretter.
 - There are scripts developed for Rofi, Dmenu, Dunst and some general utilities.
