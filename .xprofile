@@ -1,6 +1,6 @@
 xrandr -s 1366x768 &
 setxkbmap latam &
-betterlockscreen -w &
+betterlockscreen -u ~/Imagenes/slideshow -w &
 picom -f &
 xset -b &
 xset s off -dpms &
