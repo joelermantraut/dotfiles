@@ -1,1 +1,1 @@
-/home/joel/.oh-my-zsh/custom/aliases.zsh
+../../.oh-my-zsh/custom/aliases.zsh
