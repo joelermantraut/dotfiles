@@ -24,7 +24,7 @@ respective_fields = [
     "username",
     "website"
 ]
-terminal_list = ["Alacritty", "konsole"]
+terminal_list = ["Alacritty"]
 # This means, that fields must be enter in this
 # order. If there are some fields but other not,
 # it can be replaced with null string.

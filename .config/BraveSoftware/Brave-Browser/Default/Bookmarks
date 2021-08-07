@@ -1,5 +1,5 @@
 {
-   "checksum": "1c6eac4405109bb9b18d1778fe6508cb",
+   "checksum": "b913060a5dafa4b912a3efb98ddc305f",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -371,9 +371,16 @@
                   "name": "Archiso - ArchWiki",
                   "type": "url",
                   "url": "https://wiki.archlinux.org/title/archiso"
+               }, {
+                  "date_added": "13272764562978330",
+                  "guid": "b9c71649-57f6-4da0-94e5-6644a6f50460",
+                  "id": "283",
+                  "name": "laurent85v/archuseriso: Build Arch Linux iso images, create live usb drives, install on usb drives.",
+                  "type": "url",
+                  "url": "https://github.com/laurent85v/archuseriso"
                } ],
                "date_added": "13253321237620947",
-               "date_modified": "13272275086062053",
+               "date_modified": "13272764562978330",
                "guid": "d3c7d936-e61c-4ab5-ba03-c6735879ff02",
                "id": "70",
                "name": "Linux",
