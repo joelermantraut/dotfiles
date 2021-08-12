@@ -11,17 +11,17 @@ set $switchto               ~/.config/i3-scripts/switchto.py
 set $autostart              ~/.config/i3-scripts/autostart.sh
 set $next_workspace         ~/.config/i3-scripts/next_workspace.py
 set $prev_workspace         ~/.config/i3-scripts/prev_workspace.py
-set $dmenu_session          ~/.config/polybar/forest/scripts/powermenu.sh 
-set $dmenu_expulse_drives   ~/.config/rofi-scripts/rofi-expulse-drives.py
-set $dmenu_passmenu         ~/.config/rofi-scripts/rofi-advance-passmenu.py
-set $dmenu_bookmarks        ~/.config/rofi-scripts/rofi-bookmarks.py
-set $dmenu_kill             ~/.config/rofi-scripts/rofi-kill.sh
-set $dmenu_scrot            ~/.config/rofi-scripts/rofi-scrot.py
-set $dmenu_scrot_copy       ~/.config/rofi-scripts/rofi-scrot.py -c
-set $dmenu_search           ~/.config/rofi-scripts/rofi-search.py
-set $dmenu_output           ~/.config/rofi-scripts/rofi-output-audio.py
-set $dmenu_run               "rofi -show run -p ' ' -theme ~/.config/rofi/dmenu-extended.rasi"
-set $dmenu_start_vm         ~/.config/rofi-scripts/rofi-start-vm.py
+set $rofi_session          ~/.config/rofi-scripts/rofi-powermenu.sh 
+set $rofi_expulse_drives   ~/.config/rofi-scripts/rofi-expulse-drives.py
+set $rofi_passmenu         ~/.config/rofi-scripts/rofi-advance-passmenu.py
+set $rofi_bookmarks        ~/.config/rofi-scripts/rofi-bookmarks.py
+set $rofi_kill             ~/.config/rofi-scripts/rofi-kill.sh
+set $rofi_scrot            ~/.config/rofi-scripts/rofi-scrot.py
+set $rofi_scrot_copy       ~/.config/rofi-scripts/rofi-scrot.py -c
+set $rofi_search           ~/.config/rofi-scripts/rofi-search.py
+set $rofi_output           ~/.config/rofi-scripts/rofi-output-audio.py
+set $rofi_run               "rofi -show run -p ' ' -theme ~/.config/rofi/dmenu-extended.rasi"
+set $rofi_start_vm         ~/.config/rofi-scripts/rofi-start-vm.py
 set $rofitication           ~/.config/dunst-scripts/rofi_noti_manager.py
 
 # Commands
@@ -35,9 +35,6 @@ set $clipster "clipster -s"
 client.focused          #B73B67 #B73B67 #ffffff #CFDEE7   #CFDEE7
 client.focused_inactive #367AAF #367AAF #ffffff #CFDEE7   #CFDEE7
 client.unfocused        #212B30 #212B30 #ffffff #CFDEE7   #CFDEE7 
-#client.urgent           #2f343a #900000 #ffffff #900000   #900000
-#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-#client.background       #0A369D
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -57,7 +54,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+w kill
 
 # start dmenu (a program launcher)
-bindsym Ctrl+Shift+Return exec --no-startup-id $dmenu_run
+bindsym Ctrl+Shift+Return exec --no-startup-id $rofi_run
 bindsym $mod+Shift+Return exec --no-startup-id dmenu_extended_run
 
 # change focus
@@ -169,7 +166,7 @@ for_window [workspace="10"] floating enable
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+q exec $dmenu_session
+bindsym $mod+Shift+q exec $rofi_session
 bindsym $mod+$alt+l exec i3-msg workspace 1 && exec betterlockscreen -l dimblur -t "Don't touch my machine!"
 
 bindsym $mod+Ctrl+q [class=".*"] kill
@@ -181,27 +178,29 @@ bindsym $mod+Shift+n exec $rofitication
 
 bindsym $mod+Shift+space exec $rofi
 
-bindsym $mod+Shift+s exec $dmenu_scrot
-bindsym $mod+Shift+Print exec $dmenu_scrot
-bindsym Print exec $dmenu_scrot_copy
+bindsym $mod+Shift+s exec $rofi_scrot
+bindsym $mod+Shift+Print exec $rofi_scrot
+bindsym Print exec $rofi_scrot_copy
 
 bindsym $mod+Shift+v exec $clipster
 bindsym $mod+period exec "rofimoji"
-bindsym $mod+$alt+p exec $dmenu_passmenu
+bindsym $mod+$alt+p exec $rofi_passmenu
 
 bindsym $mod+$alt+c exec qalculate-gtk
-bindsym $mod+e exec pcmanfm
-bindsym $mod+$alt+v exec $dmenu_start_vm
+bindsym $mod+$alt+v exec $rofi_start_vm
 
-bindsym $mod+$alt+u exec $dmenu_expulse_drives
-bindsym $mod+$alt+b exec $dmenu_bookmarks
-bindsym $mod+$alt+k exec $dmenu_kill
-bindsym $mod+$alt+g exec $dmenu_search
-bindsym $mod+$alt+o exec $dmenu_output
+bindsym $mod+$alt+u exec $rofi_expulse_drives
+bindsym $mod+$alt+b exec $rofi_bookmarks
+bindsym $mod+$alt+k exec $rofi_kill
+bindsym $mod+$alt+g exec $rofi_search
+bindsym $mod+$alt+o exec $rofi_output
+
+bindsym $mod+Shift+Escape exec lxtask
 
 # Only one instance apps 
 bindsym $mod+$alt+n exec $switchto "brave" "" "Brave-browser"
 bindsym $mod+$alt+a exec $switchto "gnote" "" "Gnote" 
+bindsym $mod+e exec $switchto "pcmanfm" "" "Pcmanfm" 
 
 # Use amixer to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 2%+ 
@@ -249,6 +248,7 @@ assign [class="Opera"]          $ws2
 assign [class="Firefox"]        $ws2
 assign [class="Chromium"]       $ws2
 assign [class="qutebrowser"]    $ws2
+assign [class="Uget-gtk"]       $ws2
 # THIRD WORKSPACE
 assign [class="Pcmanfm"]        $ws3
 assign [class="krusader"]       $ws3
@@ -260,17 +260,16 @@ assign [class="file-roller"]    $ws3
 assign [class="sublime_text"]                   $ws4
 assign [class="Atollic TrueSTUDIO for STM32"]   $ws4
 assign [class="jetbrains-pycharm-ce"]           $ws4
-assign [class="gedit"]                          $ws4
+assign [class="Gedit"]                          $ws4
 assign [class="jetbrains-studio"]               $ws4
 assign [class="vscodium"]                       $ws4
 assign [class="arduino"]                        $ws4
 assign [title=^"nvim"]                          $ws4
 # FIFTH WORKSPACE
 assign [class="prepros"]    $ws5
-assign [class="Wps"]        $ws5
-assign [class="Wpp"]        $ws5
-assign [class="Et"]         $ws5
-assign [class="Wpspdf"]     $ws5
+assign [class="wps"]        $ws5
+assign [class="wpp"]        $ws5
+assign [class="et"]         $ws5
 assign [class="pdf"]        $ws5
 assign [class="MuPDF"]      $ws5
 # SIXTH WORKSPACE
@@ -281,19 +280,19 @@ assign [class="droidcam"]   $ws6
 assign [class="zoom"]       $ws6
 assign [class="discord"]    $ws6
 assign [class="Station"]    $ws6
+assign [class="Slack"]      $ws6
 # SEVENTH WORKSPACE
-assign [class="vlc"]                            $ws7
-assign [class="transmission"]                   $ws7
-for_window [class="Spotify"] move to workspace  $ws7
+assign [class="vlc"]                $ws7
+assign [class="transmission"]       $ws7
 # EIGHTH WORKSPACE
 assign [class="VirtualBox Manager"] $ws8
 assign [class="VirtualBoxVM"]       $ws8
 # NINTH WORKSPACE
 assign [class="Lxappearance"]       $ws9
+assign [class="Lxtask"]             $ws9
 assign [class="Pavucontrol"]        $ws9
 assign [class="gpartedbin"]         $ws9
 assign [class="grub-customizer"]    $ws9 
-assign [class="Lxtask"]             $ws9
 
 # Sticky Apps
 for_window [class="Gnote"]          sticky enable
@@ -320,12 +319,15 @@ for_window [title="branchdialog"]   floating enable
 for_window [title="pinentry"]       floating enable
 for_window [class="zoom"]           floating enable
 
-for_window [class=".*"] border pixel 0
+for_window [class=".*"]         border pixel 0
+for_window [class="Spotify"]    move to workspace  $ws7
 
 # Programs on start
 exec alacritty
 exec brave
 exec pcmanfm 
+exec franz
+exec slack --startup
 
 # Configuration properties
 focus_on_window_activation focus
@@ -334,8 +336,6 @@ focus_follows_mouse no
 show_marks yes
 floating_minimum_size 120 x 50
 hide_edge_borders both
-
-exec_always ~/.config/i3-scripts/per-workspace-layout.pl
 
 # Run autostart script
 exec_always $autostart
