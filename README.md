@@ -25,7 +25,7 @@ but a bit modified.
 - Font family is [Museo Sans 300](https://en.m.fontke.com/font/12238202/download/)
 - Gtk theme is [Sweet Dark](https://www.gnome-look.org/p/1253385/)
 - Icon theme is [Candy Icons](https://www.gnome-look.org/p/1305251/)
-- LightDM theme is default theme.
+- LightDM theme is Adapta Nokto.
 
 ## Screenshots
 ![screenshot_1](https://github.com/joelermantraut/dotfiles/blob/master/dotfiles-screenshots/07-31-2021-21-21-37.png)
