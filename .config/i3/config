@@ -11,23 +11,20 @@ set $switchto               ~/.config/i3-scripts/switchto.py
 set $autostart              ~/.config/i3-scripts/autostart.sh
 set $next_workspace         ~/.config/i3-scripts/next_workspace.py
 set $prev_workspace         ~/.config/i3-scripts/prev_workspace.py
-set $rofi_session          ~/.config/rofi-scripts/rofi-powermenu.sh 
-set $rofi_expulse_drives   ~/.config/rofi-scripts/rofi-expulse-drives.py
-set $rofi_passmenu         ~/.config/rofi-scripts/rofi-advance-passmenu.py
-set $rofi_bookmarks        ~/.config/rofi-scripts/rofi-bookmarks.py
-set $rofi_kill             ~/.config/rofi-scripts/rofi-kill.sh
-set $rofi_scrot            ~/.config/rofi-scripts/rofi-scrot.py
-set $rofi_scrot_copy       ~/.config/rofi-scripts/rofi-scrot.py -c
-set $rofi_search           ~/.config/rofi-scripts/rofi-search.py
-set $rofi_output           ~/.config/rofi-scripts/rofi-output-audio.py
+set $rofi_session           ~/.config/rofi-scripts/rofi-powermenu.sh 
+set $rofi_expulse_drives    ~/.config/rofi-scripts/rofi-expulse-drives.py
+set $rofi_passmenu          ~/.config/rofi-scripts/rofi-advance-passmenu.py
+set $rofi_bookmarks         ~/.config/rofi-scripts/rofi-bookmarks.py
+set $rofi_kill              ~/.config/rofi-scripts/rofi-kill.sh
+set $rofi_scrot             ~/.config/rofi-scripts/rofi-scrot.py
+set $rofi_scrot_copy        ~/.config/rofi-scripts/rofi-scrot.py -c
+set $rofi_search            ~/.config/rofi-scripts/rofi-search.py
+set $rofi_output            ~/.config/rofi-scripts/rofi-output-audio.py
+set $rofi                   "rofi -show drun -theme ~/.config/rofi/dmenu-extended.rasi"
 set $rofi_run               "rofi -show run -p ' ' -theme ~/.config/rofi/dmenu-extended.rasi"
-set $rofi_start_vm         ~/.config/rofi-scripts/rofi-start-vm.py
+set $rofi_start_vm          ~/.config/rofi-scripts/rofi-start-vm.py
 set $rofitication           ~/.config/dunst-scripts/rofi_noti_manager.py
-
-# Commands
-set $flameshot_full "flameshot full -p /home/joel/Imagenes/Capturas"              
-set $flameshot_copy "flameshot screen -c"
-set $rofi "rofi -combi-modi window,drun -show combi -modi combi -theme ~/.config/rofi/dmenu-extended.rasi"
+set $betterlockscreen       betterlockscreen -l dimblur -t "Don't touch my machine!"
 set $clipster "clipster -s"
 
 # Colors
@@ -54,7 +51,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+w kill
 
 # start dmenu (a program launcher)
-bindsym Ctrl+Shift+Return exec --no-startup-id $rofi_run
+bindsym Ctrl+Shift+Return exec --no-startup-id $rofi
 bindsym $mod+Shift+Return exec --no-startup-id dmenu_extended_run
 
 # change focus
@@ -106,7 +103,7 @@ bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
 # read 1 character and go to the window with the character
 bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
 
-# Prompt input
+# Prompt input          
 bindsym $mod+p exec $prompt_cmd
 
 # Define names for default workspaces for which we configure key bindings later on.
@@ -167,19 +164,18 @@ for_window [workspace="10"] floating enable
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+q exec $rofi_session
-bindsym $mod+$alt+l exec i3-msg workspace 1 && exec betterlockscreen -l dimblur -t "Don't touch my machine!"
+bindsym $mod+$alt+l exec i3-msg workspace 1 && exec $betterlockscreen
 
 bindsym $mod+Ctrl+q [class=".*"] kill
 
 bindsym $mod+x exec dunstctl close-all
 bindsym $mod+Shift+x exec dunstctl close
-bindsym $mod+$alt+Shift exec dunstctl set-paused
+bindsym $mod+$alt+Shift+x exec dunstctl set-paused
 bindsym $mod+Shift+n exec $rofitication
 
-bindsym $mod+Shift+space exec $rofi
+bindsym $mod+Shift+space exec $rofi_run
 
 bindsym $mod+Shift+s exec $rofi_scrot
-bindsym $mod+Shift+Print exec $rofi_scrot
 bindsym Print exec $rofi_scrot_copy
 
 bindsym $mod+Shift+v exec $clipster
