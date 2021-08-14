@@ -9,6 +9,7 @@ export PATH=$PATH:/home/joel/.config/coc/extensions/coc-clangd-data/install/12.0
 
 export PATH=$PATH:/usr/lib/ruby/gems/2.7.0
 export PATH=$PATH:/home/joel/.local/share/gem/ruby/2.7.0
+export PATH=$PATH:/home/joel/.local/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/joel/.oh-my-zsh"
