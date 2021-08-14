@@ -183,11 +183,30 @@
     <keybind key="C-A-Left">
       <action name="GoToDesktop"/>
     </keybind>
+    <keybind key="W-exclam">
+      <action name="SendToDesktop">
+        <follow>no</follow>
+      </action>
+    </keybind>
+    <keybind key="W-1">
+      <action name="Desktop"/>
+    </keybind>
     <keybind key="C-A-Right">
       <action name="GoToDesktop"/>
     </keybind>
     <keybind key="C-A-Up">
       <action name="MaximizeFull"/>
+    </keybind>
+    <keybind key="W-2">
+      <action name="Desktop">
+        <desktop>2</desktop>
+      </action>
+    </keybind>
+    <keybind key="W-quotedbl">
+      <action name="SendToDesktop">
+        <desktop>2</desktop>
+        <follow>no</follow>
+      </action>
     </keybind>
     <keybind key="C-A-Down">
       <action name="MoveResizeTo"/>
@@ -208,6 +227,107 @@
         <command>brave</command>
       </action>
     </keybind>
+    <keybind key="A-W-c">
+      <action name="Execute">
+        <command>qalculate-gtk</command>
+      </action>
+    </keybind>
+    <keybind key="A-W-p">
+      <action name="Execute">
+        <command>~/.config/rofi-scripts/rofi-advance-passmenu.py
+set $rofi_bookmarks        ~/.config/rofi-scripts/rofi-bookmarks.py
+set $rofi_kill             ~/.config/rofi-scripts/rofi-kill.sh
+set $rofi_scrot            ~/.config/rofi-scripts/rofi-scrot.py</command>
+      </action>
+    </keybind>
+    <keybind key="A-W-u">
+      <action name="Execute">
+        <command>~/.config/rofi-scripts/rofi-expulse-drives.py</command>
+      </action>
+    </keybind>
+    <keybind key="A-W-b">
+      <action name="Execute">
+        <command>~/.config/rofi-scripts/rofi-bookmarks.py</command>
+      </action>
+    </keybind>
+    <keybind key="A-W-k">
+      <action name="Execute">
+        <command>~/.config/rofi-scripts/rofi-kill.sh</command>
+      </action>
+    </keybind>
+    <keybind key="S-W-s">
+      <action name="Execute">
+        <command>~/.config/rofi-scripts/rofi-scrot.py</command>
+      </action>
+    </keybind>
+    <keybind key="Print">
+      <action name="Execute">
+        <command>~/.config/rofi-scripts/rofi-scrot.py -c</command>
+      </action>
+    </keybind>
+    <keybind key="A-W-g">
+      <action name="Execute">
+        <command>~/.config/rofi-scripts/rofi-search.py</command>
+      </action>
+    </keybind>
+    <keybind key="A-W-o">
+      <action name="Execute">
+        <command>~/.config/rofi-scripts/rofi-output-audio.py</command>
+      </action>
+    </keybind>
+    <keybind key="A-W-v">
+      <action name="Execute">
+        <command>~/.config/rofi-scripts/rofi-start-vm.py</command>
+      </action>
+    </keybind>
+    <keybind key="S-W-space">
+      <action name="Execute">
+        <command>rofi -show run -p ' ' -theme ~/.config/rofi/dmenu-extended.rasi</command>
+      </action>
+    </keybind>
+    <keybind key="S-W-Return">
+      <action name="Execute">
+        <command>dmenu_extended</command>
+      </action>
+    </keybind>
+    <keybind key="W-F11">
+      <action name="ToggleFullscreen"/>
+    </keybind>
+    <keybind key="W-p">
+      <action name="Execute">
+        <command>bash -c &quot;$(rofi -dmenu -p 'Run command: ' -l 0)&quot;</command>
+      </action>
+    </keybind>
+    <keybind key="W-x">
+      <action name="Execute">
+        <command>dunstctl close-all</command>
+      </action>
+    </keybind>
+    <keybind key="S-W-x">
+      <action name="Execute">
+        <command>dunstctl close</command>
+      </action>
+    </keybind>
+    <keybind key="S-A-W-x">
+      <action name="Execute">
+        <command>dunstctl set-paused</command>
+      </action>
+    </keybind>
+    <keybind key="S-W-v">
+      <action name="Execute">
+        <command>clipster -s</command>
+      </action>
+    </keybind>
+    <keybind key="W-period">
+      <action name="Execute">
+        <command>rofimoji</command>
+      </action>
+    </keybind>
+    <keybind key="S-W-Escape">
+      <action name="Execute">
+        <command>lxtask</command>
+      </action>
+    </keybind>
     <keybind key="S-W-s">
       <action name="Execute">
         <command>~/.config/rofi-scripts/rofi-scrot.py</command>
@@ -218,6 +338,11 @@
     </keybind>
     <keybind key="A-Tab">
       <action name="NextWindow"/>
+    </keybind>
+    <keybind key="A-W-l">
+      <action name="Execute">
+        <command>betterlockscreen -l dimblur -t &quot;Don't touch my machine!&quot;</command>
+      </action>
     </keybind>
     <keybind key="A-S-Tab">
       <action name="PreviousWindow"/>
