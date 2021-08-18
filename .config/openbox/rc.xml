@@ -39,7 +39,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Mikachu</name>
+    <name>silence-arch</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -219,7 +219,7 @@
     </keybind>
     <keybind key="S-W-q">
       <action name="Execute">
-        <command>bash -c &quot;~/.config/polybar/forest/scripts/powermenu.sh&quot;</command>
+        <command>bash -c &quot;/home/joel/.config/rofi-scripts/powermenu.sh&quot;</command>
       </action>
     </keybind>
     <keybind key="A-W-n">

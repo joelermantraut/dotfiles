@@ -24,6 +24,7 @@ set $rofi                   "rofi -show drun -theme ~/.config/rofi/dmenu-extende
 set $rofi_run               "rofi -show run -p ' ' -theme ~/.config/rofi/dmenu-extended.rasi"
 set $rofi_start_vm          ~/.config/rofi-scripts/rofi-start-vm.py
 set $rofitication           ~/.config/dunst-scripts/rofi_noti_manager.py
+set $playerctl_script       ~/.config/scripts/playerctl_advance.py
 set $betterlockscreen       betterlockscreen -l dimblur -t "Don't touch my machine!"
 set $clipster "clipster -s"
 
@@ -191,7 +192,7 @@ bindsym $mod+$alt+k exec $rofi_kill
 bindsym $mod+$alt+g exec $rofi_search
 bindsym $mod+$alt+o exec $rofi_output
 
-bindsym $mod+Shift+Escape exec lxtask
+bindsym Ctrl+Shift+Escape exec lxtask
 
 # Only one instance apps 
 bindsym $mod+$alt+n exec $switchto "brave" "" "Brave-browser"
@@ -205,7 +206,8 @@ bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle
 
 # Control media
 bindsym XF86Tools exec $switchto "spotify" "" "Spotify" 
-bindsym XF86AudioPlay exec playerctl play-pause
+#bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPlay exec $playerctl_script
 bindsym XF86AudioPrev exec playerctl previous 
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioStop exec playerctl stop 
@@ -288,7 +290,8 @@ assign [class="Lxappearance"]       $ws9
 assign [class="Lxtask"]             $ws9
 assign [class="Pavucontrol"]        $ws9
 assign [class="gpartedbin"]         $ws9
-assign [class="grub-customizer"]    $ws9 
+assign [class="Grub-customizer"]    $ws9 
+assign [class="Obconf"]             $ws9 
 
 # Sticky Apps
 for_window [class="Gnote"]          sticky enable
@@ -313,7 +316,7 @@ for_window [class="zenity"]         floating enable
 for_window [class="ssh-askpass"]    floating enable
 for_window [title="branchdialog"]   floating enable
 for_window [title="pinentry"]       floating enable
-for_window [class="zoom"]           floating enable
+#for_window [class="zoom"]           floating enable
 
 for_window [class=".*"]         border pixel 0
 for_window [class="Spotify"]    move to workspace  $ws7

@@ -1,5 +1,5 @@
 {
-   "checksum": "1a04aa5f8f624837f688defebc1dfb72",
+   "checksum": "47f72d8ee9e326506e0a763b730f0678",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -55,36 +55,36 @@
                "type": "folder"
             }, {
                "children": [ {
-                  "date_added": "13241623176000000",
-                  "guid": "cb19d9f7-b4a0-428c-b280-5474bb0ed038",
-                  "id": "33",
-                  "name": "PSO/Mochila (carpeta compartida) - Google Drive",
+                  "date_added": "13273628084343786",
+                  "guid": "f707ae2c-d36b-4ed0-86b5-31e1f0936ebd",
+                  "id": "292",
+                  "name": "BHI-Research/self-supervised-interaction",
                   "type": "url",
-                  "url": "https://drive.google.com/drive/folders/1HZ1FCAKg2_YrO6jyP-duQvYvZyAxvnAp"
+                  "url": "https://github.com/BHI-Research/self-supervised-interaction"
                }, {
-                  "date_added": "13250641073000000",
-                  "guid": "704da12f-fb1a-4afb-a124-656bb6fb33a7",
-                  "id": "41",
-                  "name": "Efficient and Effective Practical Algorithms for the Set-Covering Problem Qi Yang, Jamie McPeek, Adam Nofsinger Department of Computer Science and Software. - ppt download",
+                  "date_added": "13273628092407795",
+                  "guid": "d8b3a6a5-5a4a-4852-8624-77253ec6eb19",
+                  "id": "293",
+                  "name": "pliang279/MultiBench: [NeurIPS 2021] Multiscale Benchmarks for Multimodal Representation Learning",
                   "type": "url",
-                  "url": "https://slideplayer.com/slide/6377863/"
+                  "url": "https://github.com/pliang279/MultiBench"
                }, {
-                  "date_added": "13258593796776988",
-                  "guid": "ec2ea759-4e7f-4257-b259-413380a3fcb6",
-                  "id": "238",
-                  "name": "1.1. Linear Models — scikit-learn 0.24.1 documentation",
+                  "date_added": "13273628099975918",
+                  "guid": "21acaec9-eea3-44a8-8b9f-e12c751ecc8c",
+                  "id": "294",
+                  "name": "MultiBench_affect_data - Google Drive",
                   "type": "url",
-                  "url": "https://scikit-learn.org/stable/modules/linear_model.html"
+                  "url": "https://drive.google.com/drive/folders/1IXZAjOEWFOGLxAK9JKvwlG2D9LThK6c5"
                }, {
-                  "date_added": "13260887231189897",
-                  "guid": "f793b43e-86f4-4bef-ab7f-577a1767abdb",
-                  "id": "263",
-                  "name": "The easiest way to convert Jupyter(.ipynb) to Python(.py) | by Bongsang Kim | Medium",
+                  "date_added": "13273628104248682",
+                  "guid": "8d06554d-f45d-4221-ab55-fc923392dccf",
+                  "id": "295",
+                  "name": "Self-supervised learning: The dark matter of intelligence",
                   "type": "url",
-                  "url": "https://medium.com/@researchplex/the-easiest-way-to-convert-jupyter-ipynb-to-python-py-912e39f16917"
+                  "url": "https://ai.facebook.com/blog/self-supervised-learning-the-dark-matter-of-intelligence/"
                } ],
                "date_added": "13253321237619032",
-               "date_modified": "13260907757409369",
+               "date_modified": "13273628104248682",
                "guid": "35115905-6794-4f20-8362-c892279c621c",
                "id": "30",
                "name": "Investigacion",
@@ -97,9 +97,16 @@
                   "name": "Message Format_ LPD,AND,CONC.docx - Documentos de Google",
                   "type": "url",
                   "url": "https://docs.google.com/document/d/1LMwQCwG0CcxN9axp_jsDQtEqEBtnDTBk/edit"
+               }, {
+                  "date_added": "13273599092372790",
+                  "guid": "d06c02ef-0375-4e18-8dd9-ca24a94183e4",
+                  "id": "290",
+                  "name": "Graphics | Qt 5.15",
+                  "type": "url",
+                  "url": "https://doc.qt.io/qt-5/topics-graphics.html"
                } ],
                "date_added": "13273278789753660",
-               "date_modified": "13273278795626209",
+               "date_modified": "13273628084343786",
                "guid": "5569fdba-842a-45d0-b4dc-6f14114742c0",
                "id": "287",
                "name": "Ether-TLMIO",
@@ -156,7 +163,7 @@
                "url": "https://www.frbb.utn.edu.ar/frbb/info/pages/electronica01.html"
             } ],
             "date_added": "13253321237617597",
-            "date_modified": "13273373083584524",
+            "date_modified": "13273599092372790",
             "guid": "6c4e4527-2e8c-49bd-b497-144695006149",
             "id": "5",
             "name": "UTN",
@@ -549,9 +556,24 @@
                "name": "How to store dotfiles | Atlassian Git Tutorial",
                "type": "url",
                "url": "https://www.atlassian.com/git/tutorials/dotfiles"
+            }, {
+               "children": [ {
+                  "date_added": "13273782645808227",
+                  "guid": "43a08ae5-26f6-4338-bae5-09f264291377",
+                  "id": "298",
+                  "name": "How to Install VirtualBox Guest Additions on Debian 10 Linux | Linuxize",
+                  "type": "url",
+                  "url": "https://linuxize.com/post/how-to-install-virtualbox-guest-additions-on-debian-10/"
+               } ],
+               "date_added": "13273782641296401",
+               "date_modified": "13273782648056159",
+               "guid": "75029700-e088-456b-b30c-de565dda81f3",
+               "id": "297",
+               "name": "Debian",
+               "type": "folder"
             } ],
             "date_added": "13253321237620778",
-            "date_modified": "13272185802691936",
+            "date_modified": "13273782645808227",
             "guid": "3cb3eb77-1bbe-4a98-8b3a-13a297b851ff",
             "id": "69",
             "name": "Informatica",
