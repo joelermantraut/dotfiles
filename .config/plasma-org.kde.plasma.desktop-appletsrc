@@ -6,36 +6,6 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][15]
-ItemGeometries-1366x768=
-ItemGeometriesHorizontal=
-activityId=d5713377-811a-42a2-a83c-fea44854b8fd
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.slideshow
-
-[Containments][15][ConfigDialog]
-DialogHeight=677
-DialogWidth=1001
-
-[Containments][15][Configuration]
-PreloadWeight=2
-
-[Containments][15][General]
-ToolBoxButtonState=topcenter
-ToolBoxButtonX=202
-
-[Containments][15][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/Next/contents/images/1366x768.png
-
-[Containments][15][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/joel/Imagenes/slideshow/Desert 2.png
-SlideInterval=3600
-SlidePaths=/home/joel/Imagenes/slideshow
-
 [Containments][16]
 activityId=
 formfactor=2
@@ -69,14 +39,14 @@ immutability=1
 plugin=org.kde.plasma.pager
 
 [Containments][16][Applets][18][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][16][Applets][19]
 immutability=1
 plugin=org.kde.plasma.icontasks
 
 [Containments][16][Applets][19][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][16][Applets][19][Configuration][ConfigDialog]
 DialogHeight=558
@@ -90,14 +60,14 @@ immutability=1
 plugin=org.kde.plasma.marginsseparator
 
 [Containments][16][Applets][20][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][16][Applets][21]
 immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][16][Applets][21][Configuration]
-PreloadWeight=27
+PreloadWeight=34
 SystrayContainmentId=22
 
 [Containments][16][Applets][27]
@@ -105,7 +75,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][16][Applets][27][Configuration]
-PreloadWeight=42
+PreloadWeight=92
 
 [Containments][16][Applets][27][Configuration][ConfigDialog]
 DialogHeight=558
@@ -116,14 +86,14 @@ immutability=1
 plugin=org.kde.plasma.showdesktop
 
 [Containments][16][Applets][28][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][16][Applets][29]
 immutability=1
 plugin=org.kde.plasma.icon
 
 [Containments][16][Applets][29][Configuration]
-PreloadWeight=18
+PreloadWeight=10
 localPath=/home/joel/.local/share/plasma_icons/Alacritty.desktop
 url=file:///usr/share/applications/Alacritty.desktop
 
@@ -132,7 +102,7 @@ DialogHeight=84
 DialogWidth=1366
 
 [Containments][16][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][16][General]
 AppletOrder=17;18;29;19;20;21;27;28
@@ -151,35 +121,64 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][22][Applets][23][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][22][Applets][24]
 immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][22][Applets][24][Configuration]
-PreloadWeight=7
+PreloadWeight=0
 
 [Containments][22][Applets][25]
 immutability=1
 plugin=org.kde.plasma.keyboardlayout
 
 [Containments][22][Applets][25][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][22][Applets][26]
 immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][22][Applets][26][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][22][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][22][General]
 extraItems=org.kde.plasma.notifications,org.kde.plasma.mediacontroller,org.kde.plasma.clipboard,org.kde.plasma.keyboardlayout,org.kde.plasma.battery,org.kde.plasma.devicenotifier
 knownItems=org.kde.plasma.notifications,org.kde.plasma.mediacontroller,org.kde.plasma.clipboard,org.kde.plasma.keyboardlayout,org.kde.plasma.battery,org.kde.plasma.devicenotifier
 
+[Containments][30]
+activityId=d5713377-811a-42a2-a83c-fea44854b8fd
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.desktopcontainment
+wallpaperplugin=org.kde.image
+
+[Containments][30][ConfigDialog]
+DialogHeight=677
+DialogWidth=1001
+
+[Containments][30][Configuration]
+PreloadWeight=0
+
+[Containments][30][General]
+ToolBoxButtonState=topcenter
+ToolBoxButtonX=202
+
+[Containments][30][Wallpaper][org.kde.image][General]
+Image=file:///usr/share/wallpapers/Next/contents/images/1366x768.png
+
+[Containments][30][Wallpaper][org.kde.slideshow][General]
+Image=file:///home/joel/Imagenes/slideshow/Desert 2.png
+SlideInterval=3600
+SlidePaths=/home/joel/Imagenes/slideshow
+
 [ScreenMapping]
-itemsOnDisabledScreens=
+itemsOnDisabledScreens=0,23,desktop:/node_modules,desktop:/Documents,desktop:/Imagenes,desktop:/dotfiles-screenshots,desktop:/Escritorio,desktop:/Arduino,desktop:/Downloads,desktop:/package-lock.json,desktop:/whatsmatic,desktop:/hdj,desktop:/widgets,desktop:/Documentos,desktop:/dmenu-own-compilation,desktop:/mycroft-core,desktop:/arch-post-installation-script,desktop:/README.md,desktop:/eww,desktop:/vhdl_scripts,desktop:/Descargas,desktop:/yay,desktop:/components-web-calc,desktop:/package.json,desktop:/Videos
+screenMapping=

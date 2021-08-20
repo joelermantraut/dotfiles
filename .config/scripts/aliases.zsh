@@ -30,3 +30,9 @@ alias ps='procs --tree'
 alias v='nvim'
 
 alias feh='feh --draw-filename --scale-down --borderless --action "echo %n;"'
+
+alias yay='yay --noeditmenu --noconfirm --removemake --cleanafter --sudoloop'
+# --cleanafter          Remove package sources after successful install 
+# --noeditmenu          Don't edit/view PKGBUILDS
+# --removemake          Remove makedepends after install
+# --sudoloop            Loop sudo calls in the background to avoid timeout

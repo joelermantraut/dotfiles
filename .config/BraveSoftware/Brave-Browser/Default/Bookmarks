@@ -1,5 +1,5 @@
 {
-   "checksum": "47f72d8ee9e326506e0a763b730f0678",
+   "checksum": "7f69e4384c525543beb2ebe691247dce",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -466,6 +466,21 @@
                "name": "i3",
                "type": "folder"
             }, {
+               "children": [ {
+                  "date_added": "13273782645808227",
+                  "guid": "43a08ae5-26f6-4338-bae5-09f264291377",
+                  "id": "298",
+                  "name": "How to Install VirtualBox Guest Additions on Debian 10 Linux | Linuxize",
+                  "type": "url",
+                  "url": "https://linuxize.com/post/how-to-install-virtualbox-guest-additions-on-debian-10/"
+               } ],
+               "date_added": "13273782641296401",
+               "date_modified": "13273782648056159",
+               "guid": "75029700-e088-456b-b30c-de565dda81f3",
+               "id": "297",
+               "name": "Debian",
+               "type": "folder"
+            }, {
                "date_added": "13260735962155131",
                "guid": "900d88df-b606-417c-b534-7538a42e77ca",
                "id": "258",
@@ -556,24 +571,9 @@
                "name": "How to store dotfiles | Atlassian Git Tutorial",
                "type": "url",
                "url": "https://www.atlassian.com/git/tutorials/dotfiles"
-            }, {
-               "children": [ {
-                  "date_added": "13273782645808227",
-                  "guid": "43a08ae5-26f6-4338-bae5-09f264291377",
-                  "id": "298",
-                  "name": "How to Install VirtualBox Guest Additions on Debian 10 Linux | Linuxize",
-                  "type": "url",
-                  "url": "https://linuxize.com/post/how-to-install-virtualbox-guest-additions-on-debian-10/"
-               } ],
-               "date_added": "13273782641296401",
-               "date_modified": "13273782648056159",
-               "guid": "75029700-e088-456b-b30c-de565dda81f3",
-               "id": "297",
-               "name": "Debian",
-               "type": "folder"
             } ],
             "date_added": "13253321237620778",
-            "date_modified": "13273782645808227",
+            "date_modified": "13273814637388550",
             "guid": "3cb3eb77-1bbe-4a98-8b3a-13a297b851ff",
             "id": "69",
             "name": "Informatica",

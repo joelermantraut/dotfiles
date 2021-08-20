@@ -119,6 +119,7 @@ set $ws7 7
 set $ws8 8
 set $ws9 9
 set $ws10 10
+set $ws_zoom 11
 
 # switch to workspace
 bindsym $mod+exclam         workspace number $ws1
@@ -131,6 +132,7 @@ bindsym $mod+slash          workspace number $ws7
 bindsym $mod+parenleft      workspace number $ws8
 bindsym $mod+parenright     workspace number $ws9
 bindsym $mod+equal          workspace number $ws10
+bindsym $mod+z              workspace number $ws_zoom
 
 bindsym $mod+a workspace back_and_forth
 bindsym $mod+$alt+Left  exec $prev_workspace
@@ -275,7 +277,6 @@ assign [class="Franz"]      $ws6
 assign [class="whatsdesk"]  $ws6
 assign [class="Telegram"]   $ws6
 assign [class="droidcam"]   $ws6
-assign [class="zoom"]       $ws6
 assign [class="discord"]    $ws6
 assign [class="Station"]    $ws6
 assign [class="Slack"]      $ws6
@@ -292,6 +293,9 @@ assign [class="Pavucontrol"]        $ws9
 assign [class="gpartedbin"]         $ws9
 assign [class="Grub-customizer"]    $ws9 
 assign [class="Obconf"]             $ws9 
+
+# SPECIAL WORKSPACE (ZOOM)
+assign [class="zoom"]               $ws_zoom
 
 # Sticky Apps
 for_window [class="Gnote"]          sticky enable
