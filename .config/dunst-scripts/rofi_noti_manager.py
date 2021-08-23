@@ -7,7 +7,8 @@ Shows a rofi notifications history.
 import os.path
 import subprocess
 
-FILE_PATH = os.path.expanduser("~/.config/dunst/notifications.txt")
+FILE_PATH = os.path.expanduser("~/.config/dunst-scripts/notifications.txt")
+ROFI_THEME = os.path.expanduser("~/.config/rofi/dunst-notifications.rasi")
 
 def get_cmd_output(cmd):
     """
@@ -23,7 +24,8 @@ def launch_rofi(options):
     Runs rofi with given options.
     """
     options = "~".join(["'{}'".format(item) for item in options])
-    string = 'list=(' + options + ');password=$(printf "%s\n" "${list[@]}" | rofi -sep "~" -markup-rows -dmenu -p "Select: ");echo $password;'
+    string = 'list=(' + options + ');password=$(printf "%s\n" "${list[@]}" | \
+             rofi -sep "~" -markup-rows -dmenu -p "Select: " -theme ' + ROFI_THEME  + ');echo $password;'
     return get_cmd_output(string)
 
 def open_noti_file(file_path):

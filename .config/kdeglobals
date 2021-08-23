@@ -138,8 +138,11 @@ DirSelectDialog Size=851,598
 History Items[$e]=file:$HOME/Imagenes/slideshow
 
 [General]
-Name=Breeze Dark
+BrowserApplication=brave-browser.desktop
 Name[es_ES]=Brisa oscuro
+Name=Breeze Dark
+TerminalApplication=alacritty
+TerminalService=Alacritty.desktop
 shadeSortColumn=true
 widgetStyle=Breeze
 

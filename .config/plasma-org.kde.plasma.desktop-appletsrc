@@ -41,6 +41,13 @@ plugin=org.kde.plasma.pager
 [Containments][16][Applets][18][Configuration]
 PreloadWeight=0
 
+[Containments][16][Applets][18][Configuration][ConfigDialog]
+DialogHeight=558
+DialogWidth=720
+
+[Containments][16][Applets][18][Configuration][General]
+displayedText=Number
+
 [Containments][16][Applets][19]
 immutability=1
 plugin=org.kde.plasma.icontasks
@@ -67,7 +74,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][16][Applets][21][Configuration]
-PreloadWeight=34
+PreloadWeight=4
 SystrayContainmentId=22
 
 [Containments][16][Applets][27]
@@ -75,7 +82,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][16][Applets][27][Configuration]
-PreloadWeight=92
+PreloadWeight=70
 
 [Containments][16][Applets][27][Configuration][ConfigDialog]
 DialogHeight=558
@@ -93,7 +100,7 @@ immutability=1
 plugin=org.kde.plasma.icon
 
 [Containments][16][Applets][29][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 localPath=/home/joel/.local/share/plasma_icons/Alacritty.desktop
 url=file:///usr/share/applications/Alacritty.desktop
 
@@ -144,6 +151,13 @@ plugin=org.kde.plasma.devicenotifier
 [Containments][22][Applets][26][Configuration]
 PreloadWeight=0
 
+[Containments][22][Applets][31]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][22][Applets][31][Configuration]
+PreloadWeight=28
+
 [Containments][22][Configuration]
 PreloadWeight=0
 
@@ -152,6 +166,8 @@ extraItems=org.kde.plasma.notifications,org.kde.plasma.mediacontroller,org.kde.p
 knownItems=org.kde.plasma.notifications,org.kde.plasma.mediacontroller,org.kde.plasma.clipboard,org.kde.plasma.keyboardlayout,org.kde.plasma.battery,org.kde.plasma.devicenotifier
 
 [Containments][30]
+ItemGeometries-1366x768=
+ItemGeometriesHorizontal=
 activityId=d5713377-811a-42a2-a83c-fea44854b8fd
 formfactor=0
 immutability=1

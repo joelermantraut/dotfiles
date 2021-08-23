@@ -1,13 +1,8 @@
 xrandr -s 1366x768 &
 setxkbmap latam &
 picom -f &
-#xset -b &
-#xset s off -dpms &
-#xset r rate 180 60 &
 xset -b s off -dpms r rate 180 60 &
 xhost + &
 clipster -d &
-xmodmap ~/.Xmodmap &
-xkbcomp output.xkb $DISPLAY &
-#$HOME/.config/scripts/snippets.py &
-#$HOME/.config/scripts/volume_control.py &
+#xmodmap ~/.Xmodmap &
+#xkbcomp output.xkb $DISPLAY &

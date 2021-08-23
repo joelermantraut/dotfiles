@@ -25,8 +25,9 @@ set $rofi_run               "rofi -show run -p ' ' -theme ~/.config/rofi/dmen
 set $rofi_start_vm          ~/.config/rofi-scripts/rofi-start-vm.py
 set $rofitication           ~/.config/dunst-scripts/rofi_noti_manager.py
 set $playerctl_script       ~/.config/scripts/playerctl_advance.py
-set $betterlockscreen       betterlockscreen -l dimblur -t "Don't touch my machine!"
-set $clipster "clipster -s"
+set $betterlockscreen       betterlockscreen -l dimblur -t "Dont touch my machine!"
+set $clipster               "clipster -s"
+set $scrot                  "scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/Imagenes/captures'"
 
 # Colors
 # class                 border  backgr. text    indicator child_border
@@ -36,7 +37,7 @@ client.unfocused        #212B30 #212B30 #ffffff #CFDEE7   #CFDEE7
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Ubuntu Mono Nerd Fonts 8
+font pango:Ubuntu Mono Nerd Fonts 7
 
 gaps outer 1
 gaps inner 2
@@ -167,7 +168,7 @@ for_window [workspace="10"] floating enable
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+q exec $rofi_session
-bindsym $mod+$alt+l exec i3-msg workspace 1 && exec $betterlockscreen
+bindsym $mod+$alt+l exec i3-msg workspace 1 && exec betterlockscreen -l dimblur --text "Dont touch my machine!"
 
 bindsym $mod+Ctrl+q [class=".*"] kill
 
@@ -179,15 +180,17 @@ bindsym $mod+Shift+n exec $rofitication
 bindsym $mod+Shift+space exec $rofi_run
 
 bindsym $mod+Shift+s exec $rofi_scrot
-bindsym Print exec $rofi_scrot_copy
+bindsym $mod+Print exec $rofi_scrot_copy
+bindsym Print exec $scrot
 
 bindsym $mod+Shift+v exec $clipster
 bindsym $mod+period exec "rofimoji"
 bindsym $mod+$alt+p exec $rofi_passmenu
 
 bindsym $mod+$alt+c exec qalculate-gtk
-bindsym $mod+$alt+v exec $rofi_start_vm
+bindsym $mod+$alt+s exec spotify
 
+bindsym $mod+$alt+v exec $rofi_start_vm
 bindsym $mod+$alt+u exec $rofi_expulse_drives
 bindsym $mod+$alt+b exec $rofi_bookmarks
 bindsym $mod+$alt+k exec $rofi_kill
@@ -258,7 +261,6 @@ assign [class="xarchiver"]      $ws3
 assign [class="file-roller"]    $ws3
 # FOURTH WORKSPACE
 assign [class="sublime_text"]                   $ws4
-assign [class="Atollic TrueSTUDIO for STM32"]   $ws4
 assign [class="jetbrains-pycharm-ce"]           $ws4
 assign [class="Gedit"]                          $ws4
 assign [class="jetbrains-studio"]               $ws4
@@ -266,12 +268,13 @@ assign [class="vscodium"]                       $ws4
 assign [class="arduino"]                        $ws4
 assign [title=^"nvim"]                          $ws4
 # FIFTH WORKSPACE
-assign [class="prepros"]    $ws5
-assign [class="wps"]        $ws5
-assign [class="wpp"]        $ws5
-assign [class="et"]         $ws5
-assign [class="pdf"]        $ws5
-assign [class="MuPDF"]      $ws5
+assign [class="prepros"]            $ws5
+assign [class="wps"]                $ws5
+assign [class="wpp"]                $ws5
+assign [class="et"]                 $ws5
+assign [class="pdf"]                $ws5
+assign [class="MuPDF"]              $ws5
+assign [class="Foxit Reader"]       $ws5
 # SIXTH WORKSPACE
 assign [class="Franz"]      $ws6
 assign [class="whatsdesk"]  $ws6
