@@ -260,7 +260,7 @@ assign [title="nomacs"]         $ws3
 assign [class="xarchiver"]      $ws3
 assign [class="file-roller"]    $ws3
 # FOURTH WORKSPACE
-assign [class="sublime_text"]                   $ws4
+assign [class="Sublime_text"]                   $ws4
 assign [class="jetbrains-pycharm-ce"]           $ws4
 assign [class="Gedit"]                          $ws4
 assign [class="jetbrains-studio"]               $ws4
