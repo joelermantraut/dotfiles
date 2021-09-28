@@ -16,7 +16,7 @@ Plug 'junegunn/fzf.vim' " FZF
 Plug 'mbbill/undotree'
 Plug 'jeetsukumaran/vim-buffergator' " To manage buffers
 
-" Syntaxis
+" Formatting 
 Plug 'frazrepo/vim-rainbow' " Shows rainbow brackets and others 
 Plug 'preservim/nerdcommenter' " Comments Code
 Plug 'chrisbra/colorizer' " Shows colors with colors 
@@ -24,11 +24,10 @@ Plug 'lfilho/cosco.vim' " To autocomplete comma and semicolon
 Plug 'tpope/vim-repeat' " To make repeat more clever
 Plug 'raimondi/delimitmate' " To auto close brackets, etc
 Plug 'tpope/vim-surround' " Does easy to replace quoting, brackets, etc.
+Plug 'Yggdroot/indentLine' " Shows un indent line
 
 " Syntax Highlighting
-Plug 'digitaltoad/vim-pug'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'vim-python/python-syntax'
+Plug 'sheerun/vim-polyglot'
 
 " Interfaz
 Plug 'itchyny/lightline.vim' " Status Bar 
@@ -41,6 +40,7 @@ Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim' " Emmet
 Plug 'easymotion/vim-easymotion' " Search in code 
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Autocompletion 
+Plug 'sirver/ultisnips'
 Plug 'itchyny/vim-gitbranch' " To show git branch in status bar
 Plug 'airblade/vim-gitgutter' " To show changes in file
 " Installed with Coc: coc-prettier and coc-pairs

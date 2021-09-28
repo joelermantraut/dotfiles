@@ -27,7 +27,7 @@ set timeoutlen=500 " Leader key wait time
 set hidden " Hides tabs (windows) not in use
 set clipboard=unnamedplus
 " With this vim uses primary clipboard
-set guicursor= " Cursor is always a block
+set guicursor=v-c-sm:block,n-i-ci-ve:ver25,r-cr-o:hor20 " Cursor is always a block
 set nohlsearch
 set scrolloff=10 " Centers the cursor when near EOF
 set signcolumn=yes " Use for linters and git apps

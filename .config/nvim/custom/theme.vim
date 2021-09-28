@@ -3,9 +3,9 @@ set termguicolors
 syntax enable
 "colorscheme ayu
 "colorscheme sonokai
-colorscheme tender
+"colorscheme tender
 "colorscheme nord
-"colorscheme gruvbox
+colorscheme gruvbox
 
 "let ayucolor="dark"  " for light version of theme
 
