@@ -1,5 +1,5 @@
 {
-   "checksum": "36395d22948659125e77e43159dcd199",
+   "checksum": "b680fd5669b204ee7ee048660b8d660c",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -103,9 +103,72 @@
                   "name": "Multimodal Opinionlevel Sentiment Intensity Dataset | Papers With Code",
                   "type": "url",
                   "url": "https://paperswithcode.com/dataset/multimodal-opinionlevel-sentiment-intensity"
+               }, {
+                  "date_added": "13275778366913541",
+                  "guid": "75a7cf10-14a4-425b-bb5c-eacc6dbd7711",
+                  "id": "312",
+                  "name": "Transformer Neural Networks - EXPLAINED! (Attention is all you need) - YouTube",
+                  "type": "url",
+                  "url": "https://www.youtube.com/watch?v=TQQlZhbC5ps&t=704s"
+               }, {
+                  "date_added": "13276311851675482",
+                  "guid": "cebfa7f8-7da5-45af-9d05-d6e7a94d41b0",
+                  "id": "316",
+                  "name": "google-research/uda: Unsupervised Data Augmentation (UDA)",
+                  "type": "url",
+                  "url": "https://github.com/google-research/uda"
+               }, {
+                  "date_added": "13276312443066097",
+                  "guid": "f811271f-315b-46da-ad15-69ada96231d1",
+                  "id": "317",
+                  "name": "fastai/fastbook: The fastai book, published as Jupyter Notebooks",
+                  "type": "url",
+                  "url": "https://github.com/fastai/fastbook"
+               }, {
+                  "date_added": "13276312982686276",
+                  "guid": "c0d9f77b-cea6-4387-88a6-d419b8f8c457",
+                  "id": "318",
+                  "name": "beniz/deepdetect: Deep Learning API and Server in C++11 support for Caffe, Caffe2, PyTorch,TensorRT, Dlib, NCNN, Tensorflow, XGBoost and TSNE",
+                  "type": "url",
+                  "url": "https://github.com/beniz/deepdetect"
+               }, {
+                  "date_added": "13276313639319612",
+                  "guid": "1ac86840-6ee8-412f-9396-c056de6b4651",
+                  "id": "319",
+                  "name": "HowTo100M",
+                  "type": "url",
+                  "url": "https://www.di.ens.fr/willow/research/howto100m/"
+               }, {
+                  "date_added": "13276380565727141",
+                  "guid": "3a37664e-9312-4c25-8351-4a7c3a59dc5f",
+                  "id": "321",
+                  "name": "EthicalML/awesome-production-machine-learning: A curated list of awesome open source libraries to deploy, monitor, version and scale your machine learning",
+                  "type": "url",
+                  "url": "https://github.com/EthicalML/awesome-production-machine-learning"
+               }, {
+                  "date_added": "13276381344116955",
+                  "guid": "42bb735c-5f85-4fc3-b188-6ca32b951bbc",
+                  "id": "322",
+                  "name": "Avik-Jain/100-Days-Of-ML-Code: 100 Days of ML Coding",
+                  "type": "url",
+                  "url": "https://github.com/Avik-Jain/100-Days-Of-ML-Code"
+               }, {
+                  "date_added": "13276381464425405",
+                  "guid": "d2dd1c84-1434-4bac-83b6-daad481cdd37",
+                  "id": "323",
+                  "name": "yunjey/pytorch-tutorial: PyTorch Tutorial for Deep Learning Researchers",
+                  "type": "url",
+                  "url": "https://github.com/yunjey/pytorch-tutorial"
+               }, {
+                  "date_added": "13277277596908471",
+                  "guid": "1a99568e-4ba5-4d2b-a33f-64fb85c29ab9",
+                  "id": "335",
+                  "name": "Copy of MDETR.ipynb - Colaboratory",
+                  "type": "url",
+                  "url": "https://colab.research.google.com/drive/1o2BjsQ_LhY7vtdE--8UvR7bcJF3ynAjx#scrollTo=yOIBGSLoTgcc"
                } ],
                "date_added": "13253321237619032",
-               "date_modified": "13274566076445506",
+               "date_modified": "13277277599180415",
                "guid": "35115905-6794-4f20-8362-c892279c621c",
                "id": "30",
                "name": "Investigacion",
@@ -125,9 +188,37 @@
                   "name": "Graphics | Qt 5.15",
                   "type": "url",
                   "url": "https://doc.qt.io/qt-5/topics-graphics.html"
+               }, {
+                  "date_added": "13275184214181633",
+                  "guid": "20d7e636-53c7-49bb-bcd0-7b2f7ffeda25",
+                  "id": "309",
+                  "name": "00 ETHERTMIO - Google Drive",
+                  "type": "url",
+                  "url": "https://drive.google.com/drive/folders/1Egvn8lI0kbBO8_iL9l6QD5IoUsPP63ow"
+               }, {
+                  "date_added": "13275186510084714",
+                  "guid": "ce0fc55a-f55c-4b30-b008-d1afe690e1f6",
+                  "id": "310",
+                  "name": "[3] SW - Google Drive",
+                  "type": "url",
+                  "url": "https://drive.google.com/drive/folders/1tz2YI-Iw2RbNRbpvphyxeohTOhxrpZvT"
+               }, {
+                  "date_added": "13275896705395916",
+                  "guid": "07644bb9-fa8b-4f47-b971-20cd4c3c615d",
+                  "id": "314",
+                  "name": "The Oscilloscope",
+                  "type": "url",
+                  "url": "https://codepen.io/nitnelav/pen/KzPwrK"
+               }, {
+                  "date_added": "13276625671634084",
+                  "guid": "d620947a-27cf-4cc8-b99e-9a5207a7ecf5",
+                  "id": "333",
+                  "name": "[1] V02 - Google Drive",
+                  "type": "url",
+                  "url": "https://drive.google.com/drive/folders/10zp5QhEd--AwUjjnPkqxA5SG0kmPYRZX"
                } ],
                "date_added": "13273278789753660",
-               "date_modified": "13273628084343786",
+               "date_modified": "13277277596908471",
                "guid": "5569fdba-842a-45d0-b4dc-6f14114742c0",
                "id": "287",
                "name": "Ether-TLMIO",
@@ -272,13 +363,6 @@
             "type": "folder"
          }, {
             "children": [ {
-               "date_added": "13246649925000000",
-               "guid": "c459e678-352a-4cb9-8d67-492d3bf3dfd5",
-               "id": "59",
-               "name": "Sensor Infrarrojo con Arduino | Ingenia",
-               "type": "url",
-               "url": "https://ingeniaoaxaca.com/sensor-infrarrojo-con-arduino/"
-            }, {
                "date_added": "13246330037000000",
                "guid": "ebb6dca8-1d61-4c89-92b1-e4d8c05789a3",
                "id": "60",
@@ -502,6 +586,56 @@
                "name": "Debian",
                "type": "folder"
             }, {
+               "children": [ {
+                  "date_added": "13276402840335940",
+                  "guid": "77849387-618b-452c-ba83-36cf3f0aac73",
+                  "id": "326",
+                  "name": "A half-hour to learn Rust - fasterthanli.me",
+                  "type": "url",
+                  "url": "https://fasterthanli.me/articles/a-half-hour-to-learn-rust"
+               }, {
+                  "date_added": "13276402845208192",
+                  "guid": "9953beb6-23cb-424a-b020-f3d64eee2192",
+                  "id": "327",
+                  "name": "Tour of Rust - Let's go on an adventure!",
+                  "type": "url",
+                  "url": "https://tourofrust.com/"
+               }, {
+                  "date_added": "13276402849488065",
+                  "guid": "82fdf97e-7ba8-477d-8868-f61bd4962042",
+                  "id": "328",
+                  "name": "Rust Crash Course | Rustlang - YouTube",
+                  "type": "url",
+                  "url": "https://www.youtube.com/watch?v=zF34dRivLOw"
+               }, {
+                  "date_added": "13276402891337586",
+                  "guid": "2f01da9f-2213-4929-9dac-0bf4563d7e8c",
+                  "id": "329",
+                  "name": "The Rust Programming Language - The Rust Programming Language",
+                  "type": "url",
+                  "url": "https://doc.rust-lang.org/stable/book/"
+               }, {
+                  "date_added": "13276402906218368",
+                  "guid": "80ecba32-7479-430b-8dce-8dcda9c8099c",
+                  "id": "330",
+                  "name": "Table of Contents - Rust Cookbook",
+                  "type": "url",
+                  "url": "https://rust-lang-nursery.github.io/rust-cookbook/"
+               }, {
+                  "date_added": "13276405494077781",
+                  "guid": "78cf5f7c-afd1-4090-8077-7395332dd096",
+                  "id": "331",
+                  "name": "Rust Language Cheat Sheet",
+                  "type": "url",
+                  "url": "https://cheats.rs/#basic-types"
+               } ],
+               "date_added": "13276402833335067",
+               "date_modified": "13276625671634084",
+               "guid": "c0f51429-a6a8-4a4a-88b7-24e60f3d0088",
+               "id": "325",
+               "name": "Rust",
+               "type": "folder"
+            }, {
                "date_added": "13260735962155131",
                "guid": "900d88df-b606-417c-b534-7538a42e77ca",
                "id": "258",
@@ -594,7 +728,7 @@
                "url": "https://www.atlassian.com/git/tutorials/dotfiles"
             } ],
             "date_added": "13253321237620778",
-            "date_modified": "13274301796482198",
+            "date_modified": "13276405494077781",
             "guid": "3cb3eb77-1bbe-4a98-8b3a-13a297b851ff",
             "id": "69",
             "name": "Informatica",

@@ -1,8 +1,6 @@
-xrandr -s 1366x768 &
 setxkbmap latam &
 picom -f &
 xset -b s off -dpms r rate 180 60 &
 xhost + &
-clipster -d &
 #xmodmap ~/.Xmodmap &
 #xkbcomp output.xkb $DISPLAY &

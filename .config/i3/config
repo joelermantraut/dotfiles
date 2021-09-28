@@ -29,6 +29,11 @@ set $betterlockscreen       betterlockscreen -l dimblur -t "Dont touch my machin
 set $clipster               "clipster -s"
 set $scrot                  "scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/Imagenes/captures'"
 
+# Screens name
+set $main                   DVI-D-0
+set $right                  VGA-0
+set $TV                     HDMI-0
+
 # Colors
 # class                 border  backgr. text    indicator child_border
 client.focused          #B73B67 #B73B67 #ffffff #CFDEE7   #CFDEE7
@@ -110,17 +115,31 @@ bindsym $mod+p exec $prompt_cmd
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 1
-set $ws2 2
-set $ws3 3
-set $ws4 4
-set $ws5 5
-set $ws6 6
-set $ws7 7
-set $ws8 8
-set $ws9 9
-set $ws10 10
-set $ws_zoom 11
+set $ws1        1
+set $ws2        2
+set $ws3        3
+set $ws4        4
+set $ws5        5
+set $ws6        6
+set $ws7        7
+set $ws8        8
+set $ws9        9
+set $ws10       10
+set $ws_zoom    11
+set $ws_right   12
+
+workspace $ws1      output $main
+workspace $ws2      output $main
+workspace $ws3      output $main
+workspace $ws4      output $main
+workspace $ws5      output $main
+workspace $ws6      output $main
+workspace $ws7      output $main
+workspace $ws8      output $main
+workspace $ws9      output $main
+workspace $ws10     output $main
+workspace $ws_zoom  output $main
+workspace $ws_right output $right
 
 # switch to workspace
 bindsym $mod+exclam         workspace number $ws1
@@ -135,7 +154,7 @@ bindsym $mod+parenright     workspace number $ws9
 bindsym $mod+equal          workspace number $ws10
 bindsym $mod+z              workspace number $ws_zoom
 
-bindsym $mod+a workspace back_and_forth
+bindsym $mod+a               workspace back_and_forth
 bindsym $mod+$alt+Left  exec $prev_workspace
 bindsym $mod+$alt+Right exec $next_workspace
 
@@ -161,9 +180,16 @@ bindsym $mod+Shift+slash        move container to workspace number $ws7
 bindsym $mod+Shift+8            move container to workspace number $ws8
 bindsym $mod+Shift+9            move container to workspace number $ws9
 bindsym $mod+Shift+equal        move container to workspace number $ws10
+bindsym $mod+Shift+z            move container to workspace number $ws_zoom
 
 for_window [workspace="10"] floating enable
 # Floating workspace
+
+# Multiple screens
+bindsym $mod+Ctrl+Left              move container to output $main
+bindsym $mod+Ctrl+Right             move container to output $right
+bindsym $mod+Ctrl+Up                move container to output $TV
+bindsym $mod+Ctrl+Down              move container to output $main
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
