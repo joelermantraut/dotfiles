@@ -36,3 +36,5 @@ alias yay='yay --noeditmenu --noconfirm --removemake --cleanafter --sudoloop'
 # --noeditmenu          Don't edit/view PKGBUILDS
 # --removemake          Remove makedepends after install
 # --sudoloop            Loop sudo calls in the background to avoid timeout
+
+alias cpp='pwd | xsel -b'

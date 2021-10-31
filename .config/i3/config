@@ -186,8 +186,8 @@ for_window [workspace="10"] floating enable
 # Floating workspace
 
 # Multiple screens
-bindsym $mod+Ctrl+Left              move container to output $main
-bindsym $mod+Ctrl+Right             move container to output $right
+bindsym $mod+Ctrl+Left              move container to workspace number ws_right
+bindsym $mod+Ctrl+Right             move container to output $main
 bindsym $mod+Ctrl+Up                move container to output $TV
 bindsym $mod+Ctrl+Down              move container to output $main
 
@@ -237,8 +237,8 @@ bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle
 
 # Control media
 bindsym XF86Tools exec $switchto "spotify" "" "Spotify" 
-#bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioPlay exec $playerctl_script
+bindsym XF86AudioPlay exec playerctl play-pause
+#bindsym XF86AudioPlay exec $playerctl_script
 bindsym XF86AudioPrev exec playerctl previous 
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioStop exec playerctl stop 
@@ -291,10 +291,11 @@ assign [class="jetbrains-pycharm-ce"]           $ws4
 assign [class="Gedit"]                          $ws4
 assign [class="jetbrains-studio"]               $ws4
 assign [class="vscodium"]                       $ws4
+assign [class="Code"]                           $ws4
 assign [class="arduino"]                        $ws4
 assign [title=^"nvim"]                          $ws4
 # FIFTH WORKSPACE
-assign [class="prepros"]            $ws5
+assign [class="Prepros"]            $ws5
 assign [class="wps"]                $ws5
 assign [class="wpp"]                $ws5
 assign [class="et"]                 $ws5
