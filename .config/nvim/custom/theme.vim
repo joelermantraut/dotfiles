@@ -7,6 +7,6 @@ syntax enable
 "colorscheme nord
 colorscheme gruvbox
 
-"let ayucolor="dark"  " for light version of theme
+"let ayucolor="light"  " for light version of theme
 
 highlight ColoColumn ctermbg=0 guibg=lightgrey

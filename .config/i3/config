@@ -92,9 +92,6 @@ bindsym $mod+o layout tabbed
 # toggle tiling / floating
 bindsym $mod+f floating toggle
 
-# change focus between tiling / floating windows
-#bindsym $mod+f focus mode_toggle
-
 # focus the parent container
 bindsym $mod+Shift+Up focus parent
 # focus the child container
@@ -126,7 +123,6 @@ set $ws8        8
 set $ws9        9
 set $ws10       10
 set $ws_zoom    11
-set $ws_right   12
 
 workspace $ws1      output $main
 workspace $ws2      output $main
@@ -139,7 +135,6 @@ workspace $ws8      output $main
 workspace $ws9      output $main
 workspace $ws10     output $main
 workspace $ws_zoom  output $main
-workspace $ws_right output $right
 
 # switch to workspace
 bindsym $mod+exclam         workspace number $ws1
@@ -158,16 +153,16 @@ bindsym $mod+a               workspace back_and_forth
 bindsym $mod+$alt+Left  exec $prev_workspace
 bindsym $mod+$alt+Right exec $next_workspace
 
-bindsym $mod+$num_lock+KP_1 workspace $ws1
-bindsym $mod+$num_lock+KP_2 workspace $ws2
-bindsym $mod+$num_lock+KP_3 workspace $ws3
-bindsym $mod+$num_lock+KP_4 workspace $ws4
-bindsym $mod+$num_lock+KP_5 workspace $ws5
-bindsym $mod+$num_lock+KP_6 workspace $ws6
-bindsym $mod+$num_lock+KP_7 workspace $ws7
-bindsym $mod+$num_lock+KP_8 workspace $ws8
-bindsym $mod+$num_lock+KP_9 workspace $ws9
-bindsym $mod+$num_lock+KP_0 workspace $ws10
+bindsym $mod+$num_lock+KP_1     workspace $ws1
+bindsym $mod+$num_lock+KP_2     workspace $ws2
+bindsym $mod+$num_lock+KP_3     workspace $ws3
+bindsym $mod+$num_lock+KP_4     workspace $ws4
+bindsym $mod+$num_lock+KP_5     workspace $ws5
+bindsym $mod+$num_lock+KP_6     workspace $ws6
+bindsym $mod+$num_lock+KP_7     workspace $ws7
+bindsym $mod+$num_lock+KP_8     workspace $ws8
+bindsym $mod+$num_lock+KP_9     workspace $ws9
+bindsym $mod+$num_lock+KP_0     workspace $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+exclam       move container to workspace number $ws1
@@ -186,8 +181,8 @@ for_window [workspace="10"] floating enable
 # Floating workspace
 
 # Multiple screens
-bindsym $mod+Ctrl+Left              move container to workspace number ws_right
-bindsym $mod+Ctrl+Right             move container to output $main
+bindsym $mod+Ctrl+Right             move container to workspace number ws_right
+bindsym $mod+Ctrl+Left              move container to output $main
 bindsym $mod+Ctrl+Up                move container to output $TV
 bindsym $mod+Ctrl+Down              move container to output $main
 
@@ -205,7 +200,7 @@ bindsym $mod+Shift+n exec $rofitication
 
 bindsym $mod+Shift+space exec $rofi_run
 
-bindsym $mod+Shift+s exec $rofi_scrot
+bindsym $mod+Shift+s exec flameshot gui
 bindsym $mod+Print exec $rofi_scrot_copy
 bindsym Print exec $scrot
 

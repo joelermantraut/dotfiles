@@ -18,7 +18,8 @@ Plug 'jeetsukumaran/vim-buffergator' " To manage buffers
 
 " Formatting 
 Plug 'frazrepo/vim-rainbow' " Shows rainbow brackets and others 
-Plug 'preservim/nerdcommenter' " Comments Code
+"Plug 'preservim/nerdcommenter' " Comments Code
+Plug 'tpope/vim-commentary'
 Plug 'chrisbra/colorizer' " Shows colors with colors 
 Plug 'lfilho/cosco.vim' " To autocomplete comma and semicolon
 Plug 'tpope/vim-repeat' " To make repeat more clever
@@ -40,7 +41,7 @@ Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim' " Emmet
 Plug 'easymotion/vim-easymotion' " Search in code 
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Autocompletion 
-Plug 'sirver/ultisnips'
+"Plug 'sirver/ultisnips'
 Plug 'itchyny/vim-gitbranch' " To show git branch in status bar
 Plug 'airblade/vim-gitgutter' " To show changes in file
 " Installed with Coc: coc-prettier and coc-pairs
