@@ -5,8 +5,8 @@ This repository has all the config files that I have in my Arch Linux instalatio
 
 ## It includes:
 - The default windows manager is [i3-gaps](https://github.com/Airblader/i3). It's really well configured.
-- There is another windows manager installed, [Openbox](http://openbox.org/wiki/Main_Page), which is a floating WM.
-- The bar is for both, i3 and Openbox, is [Polybar](https://github.com/polybar/polybar). The themes were copied from [polybar-themes](https://github.com/adi1090x/polybar-themes)
+- There is another windows manager installed, [Budgie](https://ubuntubudgie.org/), which is a floating WM.
+- The bar for i3 is [Polybar](https://github.com/polybar/polybar). The themes were copied from [polybar-themes](https://github.com/adi1090x/polybar-themes)
 but a bit modified.
 - The terminal is [Alacritty](https://github.com/alacritty/alacritty).
 - The text editors are [Neovim](https://neovim.io/) and [Sublime-text](https://www.sublimetext.com/).
