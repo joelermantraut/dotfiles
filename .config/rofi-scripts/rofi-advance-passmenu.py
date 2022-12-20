@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding:utf-8 -*-
 
 """
@@ -35,7 +34,7 @@ def get_cmd_output(cmd):
     """
     Runs a cmd and returns its output.
     """
-    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
+    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True, executable='/bin/bash')
     (output, _) = p.communicate()
     result = output.decode()
     return result
