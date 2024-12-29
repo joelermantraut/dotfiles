@@ -10,4 +10,4 @@ udiskie -a &
 caffeine &
 xfsettingsd --sm-client-disable & # To apply themes to gtk apps
 anydesk --service &
-xset s off -dpms &
+xset -b s off -dpms r rate 180 60 &
