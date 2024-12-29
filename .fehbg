@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/joel/.cache/betterlockscreen/current/wall_resize.png' 

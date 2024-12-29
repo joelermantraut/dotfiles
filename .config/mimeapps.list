@@ -1,0 +1,6 @@
+[Default Applications]
+image/png=feh.desktop
+
+[Added Associations]
+image/png=feh.desktop;
+application/x-shellscript=alacritty_alacritty.desktop;

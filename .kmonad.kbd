@@ -1,0 +1,42 @@
+;;                               Configuration for most TKL keyboards
+;;                       use this if you need numeric keypad in some scenarios
+;;                   binded as numpad keys (not just numerics) for alt-codes input
+
+(defcfg
+  ;; ** For Linux **
+  input  (device-file "/dev/input/by-id/usb-SONiX_USB_DEVICE-event-kbd") ;; Change this line for your device
+  output (uinput-sink "KMonad output")
+
+  fallthrough true
+  allow-cmd true
+)
+
+(defsrc
+  esc     1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab     q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps    a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft      z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl    lmet lalt           spc            ralt  cmp  rctl
+)
+ 
+(defalias
+  num  (layer-toggle numpad) ;; Bind 'num' to numpad Layer
+  vu (cmd-button "/home/joel/.config/scripts/volume_brightness.sh volume_up")
+  vd (cmd-button "/home/joel/.config/scripts/volume_brightness.sh volume_down")
+)
+
+(deflayer qwerty
+  esc     1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab     q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @num    a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft      z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl    lmet lalt           spc            ralt  cmp  rctl
+)
+
+(deflayer numpad
+  _       @vd @vu  _    _    _   /  7  8  9  -  _    _    _
+  _       _    up   _    _    _   *  4  5  6  +  _   _   print
+  @num    left down right    _    _  _   1  2  3  ñ   _    _
+  _         _    _    _    _    _    _   0    _   _   _    _
+  _       _    _                 _              _    _    _
+)
