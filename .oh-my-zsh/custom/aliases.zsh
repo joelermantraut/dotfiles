@@ -20,9 +20,6 @@ alias v='nvim'
 
 alias cpp='pwd | xsel -b'
 
-alias ruff='snap run ruff'
-alias pyright='snap run pyright'
-
 alias alacritty='snap run alacritty'
 
 alias rm='trash'

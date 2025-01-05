@@ -333,6 +333,7 @@ assign [class="Station"]    $ws6
 assign [class="Slack"]      $ws6
 assign [title="WhatsApp - Chromium"]      $ws6
 # SEVENTH WORKSPACE
+assign [class="obs"]                $ws7
 assign [class="vlc"]                $ws7
 assign [class="transmission"]       $ws7
 assign [class="Spotify"]            $ws7
