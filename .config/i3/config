@@ -64,7 +64,7 @@ client.unfocused        #eba0ac #212B30 #ffffff #CFDEE7   #212B30
 font pango:Ubuntu Mono Nerd Fonts 7
 
 gaps outer 0
-gaps inner 10
+gaps inner 5
 gaps top 33
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -146,7 +146,7 @@ bindsym $mod+Shift+Down focus child
 # Make the currently focused window a scratchpad
 bindsym $mod+minus move scratchpad
 # Show the first scratchpad window
-bindsym $mod+Shift=minus scratchpad show
+bindsym $mod+Shift+minus scratchpad show
 
 # read 1 character and mark the current window with this character
 bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
@@ -199,7 +199,7 @@ bindsym $mod+Return exec $alacritty
 # start rofi
 bindsym $mod+Shift+Return exec --no-startup-id $rofi
 # Prompt input          
-bindsym $mod+p exec $prompt_cmd
+# bindsym $mod+p exec $prompt_cmd
 
 bindsym $mod+Shift+q exec $rofi_powermenu
 bindsym $mod+$alt+l exec betterlockscreen -l dim --text "Dont touch my machine!"
@@ -264,16 +264,10 @@ mode "resize" {
     bindsym Up      resize shrink height 10 px or 10 ppt
     bindsym Right   resize grow width 10 px or 10 ppt
 
-    bindsym h    resize shrink width 10 px or 10 ppt
-    bindsym k    resize grow height 10 px or 10 ppt
-    bindsym j      resize shrink height 10 px or 10 ppt
-    bindsym l   resize grow width 10 px or 10 ppt
-
-    # Move window position
-    bindsym $mod+Left   move left  10 px
-    bindsym $mod+Up     move up    10 px
-    bindsym $mod+Down   move down  10 px
-    bindsym $mod+Right  move right 10 px
+    bindsym h       resize shrink width 10 px or 10 ppt
+    bindsym k       resize grow height 10 px or 10 ppt
+    bindsym j       resize shrink height 10 px or 10 ppt
+    bindsym l       resize grow width 10 px or 10 ppt
 
     # back to normal: Enter or Escape or $mod+r
     bindsym Return mode "default"
@@ -281,6 +275,25 @@ mode "resize" {
     bindsym mod+r  mode "default"
 }
 bindsym $mod+r mode "resize"
+
+# set picture in picture window in different corners of the screen
+mode "position" {
+    bindsym Left    move left 100px
+    bindsym Down    move down 100px
+    bindsym Up      move up 100px
+    bindsym Right   move right 100px
+
+    bindsym h       move left 100px
+    bindsym k       move down 100px
+    bindsym j       move up 100px
+    bindsym l       move right 100px
+
+    # back to normal: Enter or Escape or $mod+s
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym mod+p  mode "default"
+}
+bindsym $mod+p mode "position"
 
 ## Configuration
 
@@ -360,6 +373,8 @@ for_window [class="Qalculate-gtk"]  sticky enable
 for_window [class="Qalculate-gtk"]  resize set 100 px 100 px
 for_window [class="kcalc"]          sticky enable
 for_window [class="kcalc"]          resize set 100 px 100 px
+for_window [title="Picture-in-Picture"] sticky enable
+# for_window [title="Picture-in-Picture"] move position 1300 px 750 px
 
 # Floating windows
 for_window [class="Gnote"]          floating enable
