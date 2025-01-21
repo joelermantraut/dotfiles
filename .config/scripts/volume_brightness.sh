@@ -98,12 +98,10 @@ function show_volume_notif {
 function show_music_notif {
   song_title=$(playerctl -f "{{title}}" metadata)
   song_artist=$(playerctl -f "{{artist}}" metadata)
-  song_album=$(playerctl -f "{{album}}" metadata)
 
   # Manejo de metadatos vacíos
   song_title=${song_title:-"Título desconocido"}
   song_artist=${song_artist:-"Artista desconocido"}
-  song_album=${song_album:-"Álbum desconocido"}
 
   if [[ $show_album_art == "true" ]]; then
     get_album_art
@@ -111,9 +109,9 @@ function show_music_notif {
 
   # Construcción de la notificación
   if [[ $show_album_art == "true" && -n $album_art && -f $album_art ]]; then
-    notify-send -t $notification_timeout -h string:x-dunst-stack-tag:music_notif -i "$album_art" "$song_title" "$song_artist - $song_album"
+    notify-send -t $notification_timeout -h string:x-dunst-stack-tag:music_notif -i "$album_art" "$song_title" "$song_artist"
   else
-    notify-send -t $notification_timeout -h string:x-dunst-stack-tag:music_notif "$song_title" "$song_artist - $song_album"
+    notify-send -t $notification_timeout -h string:x-dunst-stack-tag:music_notif "$song_title" "$song_artist"
   fi
 }
 

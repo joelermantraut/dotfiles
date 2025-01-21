@@ -374,7 +374,6 @@ for_window [class="Qalculate-gtk"]  resize set 100 px 100 px
 for_window [class="kcalc"]          sticky enable
 for_window [class="kcalc"]          resize set 100 px 100 px
 for_window [title="Picture-in-Picture"] sticky enable
-# for_window [title="Picture-in-Picture"] move position 1300 px 750 px
 
 # Floating windows
 for_window [class="Gnote"]          floating enable
