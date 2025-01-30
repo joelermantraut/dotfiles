@@ -3,3 +3,5 @@
 [user]
 	name = Joel Ermantraut
 	email = joelermantraut@gmail.com
+[core]
+	editor = nvim
