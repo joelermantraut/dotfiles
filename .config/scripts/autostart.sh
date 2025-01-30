@@ -3,7 +3,7 @@
 picom --animations -b &
 betterlockscreen -u ~/.wallpapers && betterlockscreen -w &
 ~/.config/polybar/forest/launch.sh &
-kmonad ~/.kmonad.kbd && setxkbmap -layout us -variant intl &
+kmonad ~/.kmonad.kbd &
 greenclip daemon &
 dunst &
 udiskie -a &
